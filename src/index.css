@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ════════════════════════════════════════════════════════════════════════
+   TIFEH COLLECTIBLES — DESIGN TOKENS
+   Re-theme the entire brand by editing the values below. Colours are stored
+   as space-separated RGB channels so Tailwind can apply opacity modifiers
+   (e.g. text-ink/70). See tailwind.config.js for the semantic class names.
+   ════════════════════════════════════════════════════════════════════════ */
+@layer base {
+  :root {
+    --color-canvas: 250 248 244; /* #faf8f4 off-white   */
+    --color-cream: 241 235 224; /* #f1ebe0 soft cream    */
+    --color-beige: 216 199 176; /* #d8c7b0 warm beige    */
+    --color-sand: 224 214 198; /* #e0d6c6 hairline lines */
+    --color-ink: 26 24 21; /* #1a1815 charcoal black    */
+    --color-muted: 122 116 106; /* #7a746a muted text    */
+    --color-gold: 176 141 87; /* #b08d57 antique gold    */
+    --color-gold-deep: 138 105 60; /* #8a693c deep gold   */
+  }
+
+  .dark {
+    --color-canvas: 22 20 16; /* #161410 */
+    --color-cream: 31 28 23; /* #1f1c17 */
+    --color-beige: 58 53 45; /* #3a352d */
+    --color-sand: 48 44 37; /* #302c25 */
+    --color-ink: 240 235 226; /* #f0ebe2 (text becomes light) */
+    --color-muted: 162 154 142; /* #a29a8e */
+    --color-gold: 198 161 74; /* #c6a14a brighter for dark bg */
+    --color-gold-deep: 176 141 87;
+  }
+
+  * {
+    border-color: rgb(var(--color-sand));
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    @apply bg-canvas text-ink font-sans antialiased;
+    font-feature-settings: 'kern', 'liga';
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Visible, on-brand keyboard focus */
+  :focus-visible {
+    outline: 2px solid rgb(var(--color-gold));
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* Selection */
+  ::selection {
+    background: rgb(var(--color-gold) / 0.28);
+    color: rgb(var(--color-ink));
+  }
+
+  /* Neutralise the browser autofill/paste highlight (the bluish/yellow box
+     Chrome & friends paint behind inputs). Keep our own canvas + ink colours. */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill {
+    -webkit-text-fill-color: rgb(var(--color-ink));
+    caret-color: rgb(var(--color-ink));
+    /* Mask the UA background with a very long transition + transparent inset. */
+    -webkit-box-shadow: 0 0 0 1000px transparent inset;
+    box-shadow: 0 0 0 1000px transparent inset;
+    transition: background-color 9999s ease-in-out 0s;
+  }
+
+  /* Honour reduced-motion preferences globally */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* Page gutter + max width, used by every section */
+  .container-page {
+    @apply mx-auto w-full max-w-container px-5 sm:px-8 lg:px-12;
+  }
+
+  /* Eyebrow label — the recurring structural device */
+  .eyebrow {
+    @apply font-sans text-[0.7rem] uppercase tracking-eyebrow text-gold;
+  }
+
+  /* Thin editorial divider */
+  .rule {
+    @apply h-px w-full bg-sand;
+  }
+
+  /* Underline-grow link used in nav + inline links */
+  .link-underline {
+    @apply relative inline-block;
+  }
+  .link-underline::after {
+    content: '';
+    @apply absolute -bottom-0.5 left-0 h-px w-full origin-right scale-x-0 bg-current transition-transform duration-500 ease-editorial;
+  }
+  .link-underline:hover::after,
+  .link-underline:focus-visible::after {
+    @apply origin-left scale-x-100;
+  }
+}
+
+@layer utilities {
+  /* Shimmer placeholder while images load */
+  .img-skeleton {
+    background: linear-gradient(
+      100deg,
+      rgb(var(--color-cream)) 30%,
+      rgb(var(--color-beige) / 0.55) 50%,
+      rgb(var(--color-cream)) 70%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 1.6s ease-in-out infinite;
+  }
+
+  /* Hide scrollbar but keep scrollability (filter rail on mobile) */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

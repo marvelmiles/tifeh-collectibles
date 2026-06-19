@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#1a1815" />
+
+    <!-- Primary meta -->
+    <title>Tifeh Collectibles — Couture Rooted in Culture</title>
+    <meta
+      name="description"
+      content="Tifeh Collectibles is an African luxury fashion house crafting traditional, bridal, corporate and runway couture where heritage meets the modern runway."
+    />
+    <link rel="canonical" href="https://www.tifehcollectibles.com/" />
+    <meta name="author" content="Tifeh Collectibles" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tifeh Collectibles" />
+    <meta property="og:title" content="Tifeh Collectibles — Couture Rooted in Culture" />
+    <meta
+      property="og:description"
+      content="An African luxury fashion house. Traditional, bridal, corporate and runway couture, handcrafted with intention."
+    />
+    <meta property="og:url" content="https://www.tifehcollectibles.com/" />
+    <meta property="og:image" content="https://www.tifehcollectibles.com/og-image.svg" />
+    <meta property="og:locale" content="en_NG" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tifeh Collectibles — Couture Rooted in Culture" />
+    <meta
+      name="twitter:description"
+      content="An African luxury fashion house. Traditional, bridal, corporate and runway couture, handcrafted with intention."
+    />
+    <meta name="twitter:image" content="https://www.tifehcollectibles.com/og-image.svg" />
+
+    <!-- Organization structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ClothingStore",
+        "name": "Tifeh Collectibles",
+        "image": "https://www.tifehcollectibles.com/og-image.svg",
+        "url": "https://www.tifehcollectibles.com/",
+        "description": "African luxury fashion house specialising in traditional, bridal, corporate and runway couture.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Abuja",
+          "addressCountry": "NG"
+        },
+        "sameAs": [
+          "https://www.instagram.com/tifehcollectibles",
+          "https://www.facebook.com/tifehcollectibles"
+        ]
+      }
+    </script>
+
+    <!-- No-flash theme: apply saved/system theme before paint -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('tifeh-theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          if (stored === 'dark' || (!stored && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>Tifeh Collectibles requires JavaScript to view the collections.</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

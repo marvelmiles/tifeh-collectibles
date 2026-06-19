@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Tifeh Collectibles monogram">
+  <rect width="64" height="64" rx="12" fill="#1a1815" />
+  <text
+    x="50%"
+    y="50%"
+    dy="0.12em"
+    text-anchor="middle"
+    font-family="Georgia, 'Playfair Display', serif"
+    font-size="34"
+    font-style="italic"
+    fill="#b08d57"
+  >T</text>
+  <circle cx="46" cy="20" r="2.4" fill="#b08d57" />
+</svg>
