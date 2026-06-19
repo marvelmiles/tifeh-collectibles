@@ -10,7 +10,7 @@ export const siteConfig = {
   tagline: "Couture rooted in culture.",
   description:
     "An African luxury fashion house crafting traditional, bridal, corporate and runway couture where heritage meets the modern runway.",
-  url: "https://www.tifehcollectibles.com",
+  url: "https://tifeh-collectibles.netlify.app",
   locations: "Abuja · Lagos",
   email: "akinwunmiboluwatife2@gmail.com",
   phoneDisplay: "+234 916 857 3541",
