@@ -1,11 +1,10 @@
-/** The six fashion categories used for gallery filtering and collections. */
+/** The fashion categories used for gallery filtering and collections. */
 export type CategorySlug =
-  | 'traditional'
   | 'corporate'
-  | 'bridal'
   | 'casual'
   | 'runway'
-  | 'custom';
+  | 'custom'
+  | 'wideleg';
 
 export interface Category {
   slug: CategorySlug;
@@ -42,7 +41,7 @@ export interface Testimonial {
   id: string;
   quote: string;
   name: string;
-  role: string;
+  // role: string;
 }
 
 export interface Stat {

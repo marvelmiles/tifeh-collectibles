@@ -1,11 +1,17 @@
 import { Link } from 'react-router-dom';
-import { Instagram, Facebook } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 import { navLinks, siteConfig, categories } from '@/config/site';
 import { Newsletter } from '@/components/home/Newsletter';
 
-const PinterestIcon = () => (
+const TikTokIcon = () => (
   <svg viewBox="0 0 24 24" className="h-[1.15rem] w-[1.15rem]" fill="currentColor" aria-hidden="true">
-    <path d="M12.04 2C6.5 2 3.7 5.97 3.7 9.28c0 2 .76 3.78 2.39 4.45.27.11.51 0 .59-.29l.24-.94c.08-.3.05-.4-.17-.66-.48-.57-.79-1.31-.79-2.36 0-3.04 2.27-5.76 5.92-5.76 3.23 0 5 1.97 5 4.61 0 3.47-1.54 6.4-3.82 6.4-1.26 0-2.2-1.04-1.9-2.32.36-1.52 1.06-3.17 1.06-4.27 0-.98-.53-1.81-1.62-1.81-1.29 0-2.32 1.33-2.32 3.11 0 1.13.38 1.9.38 1.9l-1.54 6.51c-.46 1.93-.07 4.3-.04 4.54.02.14.2.18.28.07.12-.15 1.6-1.98 2.1-3.81.14-.52.81-3.16.81-3.16.4.76 1.57 1.43 2.81 1.43 3.7 0 6.21-3.37 6.21-7.89C20.3 5.05 17.36 2 12.04 2Z" />
+    <path d="M16.6 5.82c-.87-.87-1.36-2.03-1.36-3.32h-3.19v13.79c0 1.6-1.3 2.9-2.9 2.9a2.9 2.9 0 0 1-2.9-2.9 2.9 2.9 0 0 1 2.9-2.9c.28 0 .55.04.8.12v-3.24a6.1 6.1 0 0 0-.8-.05A6.09 6.09 0 0 0 3.15 16.3 6.09 6.09 0 0 0 9.24 22.4a6.09 6.09 0 0 0 6.09-6.1V9.53a8.31 8.31 0 0 0 4.84 1.55V7.9a4.85 4.85 0 0 1-3.57-2.08Z" />
+  </svg>
+);
+
+const WhatsAppIcon = () => (
+  <svg viewBox="0 0 24 24" className="h-[1.15rem] w-[1.15rem]" fill="currentColor" aria-hidden="true">
+    <path d="M17.5 14.38c-.28-.14-1.64-.81-1.9-.9-.25-.1-.43-.14-.62.14-.18.28-.7.9-.86 1.08-.16.18-.32.2-.6.07-.28-.14-1.16-.43-2.2-1.36-.82-.73-1.36-1.63-1.53-1.9-.16-.28-.02-.43.13-.58.14-.14.32-.36.48-.55.16-.18.21-.32.32-.53.1-.21.05-.39-.04-.53-.09-.14-.62-1.5-.85-2.05-.23-.55-.46-.47-.63-.48-.16-.01-.35-.01-.53-.01-.18 0-.48.07-.73.35-.25.28-.96.94-.96 2.29 0 1.36.98 2.67 1.12 2.86.14.18 1.9 2.9 4.68 3.95 2.78 1.06 2.78.7 3.28.66.5-.05 1.64-.67 1.87-1.32.23-.65.23-1.2.16-1.32-.07-.11-.25-.18-.53-.32ZM12.02 22h-.01a9.95 9.95 0 0 1-5.08-1.39l-.36-.22-3.78 1 1.01-3.68-.24-.38A9.96 9.96 0 1 1 22 12a9.96 9.96 0 0 1-9.98 10Zm5.83-14.16A8.29 8.29 0 0 0 12.03 3.7a8.29 8.29 0 0 0-8.29 8.29c0 1.63.49 3.2 1.4 4.55l.22.33-.87 3.17 3.25-.85.32.19a8.25 8.25 0 0 0 4.97 1.62h.01a8.29 8.29 0 0 0 8.28-8.29 8.24 8.24 0 0 0-2.47-5.87Z" />
   </svg>
 );
 
@@ -77,11 +83,11 @@ export function Footer() {
               <a href={siteConfig.social.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-ink transition-colors hover:text-gold">
                 <Instagram className="h-[1.15rem] w-[1.15rem]" aria-hidden="true" />
               </a>
-              <a href={siteConfig.social.facebook} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-ink transition-colors hover:text-gold">
-                <Facebook className="h-[1.15rem] w-[1.15rem]" aria-hidden="true" />
+              <a href={siteConfig.social.tiktok} target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-ink transition-colors hover:text-gold">
+                <TikTokIcon />
               </a>
-              <a href={siteConfig.social.pinterest} target="_blank" rel="noopener noreferrer" aria-label="Pinterest" className="text-ink transition-colors hover:text-gold">
-                <PinterestIcon />
+              <a href={siteConfig.social.whatsapp} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="text-ink transition-colors hover:text-gold">
+                <WhatsAppIcon />
               </a>
             </div>
           </div>

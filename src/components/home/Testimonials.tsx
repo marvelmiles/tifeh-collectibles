@@ -53,7 +53,6 @@ export function Testimonials() {
                 <span className="block font-sans text-sm font-medium uppercase tracking-wide text-ink">
                   {current.name}
                 </span>
-                <span className="mt-1 block text-sm text-muted">{current.role}</span>
               </figcaption>
             </motion.figure>
           </AnimatePresence>

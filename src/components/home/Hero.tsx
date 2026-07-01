@@ -1,12 +1,11 @@
 import { motion } from 'framer-motion';
 import { LinkButton } from '@/components/ui/Button';
-import { Image } from '@/components/ui/Image';
 import { siteConfig } from '@/config/site';
-import { photo } from '@/lib/images';
+
 import { EASE_EDITORIAL } from '@/lib/motion';
 
-const HERO_IMG = photo('1490481651871-ab68de25d43d', { w: 1000, h: 1300 });
-const HERO_THUMB = photo('1490481651871-ab68de25d43d', { w: 40 });
+const HERO_IMG = '/Images/tifeh6.jpeg'; 
+
 
 const line = {
   hidden: { y: '110%' },
@@ -101,13 +100,11 @@ export function Hero() {
             animate={{ clipPath: 'inset(0 0 0% 0)' }}
             transition={{ duration: 1.1, delay: 0.3, ease: EASE_EDITORIAL }}
           >
-            <Image
-              src={HERO_IMG}
-              thumb={HERO_THUMB}
-              alt="Tifeh Collectibles signature look — a sculptural draped gown"
-              priority
-              className="aspect-[4/5] w-full"
-            />
+<img
+  src={HERO_IMG}
+  alt="Tifeh Collectibles signature look — a sculptural draped gown"
+  className="aspect-[4/5] w-full object-cover"
+/>
             {/* Floating caption chip */}
             <motion.div
               className="absolute -bottom-4 -left-4 hidden bg-canvas px-5 py-4 shadow-lg shadow-black/5 sm:block lg:-left-8"
