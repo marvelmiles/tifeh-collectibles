@@ -5,22 +5,22 @@ import type { Category } from "@/types";
  * details, social handles and the WhatsApp number here.
  */
 export const siteConfig = {
-  name: "Tifeh Collectibles",
+  name: "Precious Executive Wear",
   shortName: "Tifeh",
   tagline: "Couture rooted in culture.",
   description:
     "An African luxury fashion house crafting traditional, bridal, corporate and runway couture where heritage meets the modern runway.",
   url: "https://tifeh-collectibles.netlify.app",
-  locations: "Abuja · Lagos",
+  locations: "Lagos · Nigeria",
   email: "akinwunmiboluwatife2@gmail.com",
   phoneDisplay: "+234 916 857 3541",
   // International format, digits only — used to build the WhatsApp link.
   whatsapp: "2349168573541",
   social: {
-    instagram: "https://www.instagram.com/tifehcollectibles",
-    facebook: "https://www.facebook.com/tifehcollectibles",
-    pinterest: "https://www.pinterest.com/tifehcollectibles",
-    tiktok: "https://www.tiktok.com/@tifehcollectibles",
+    instagram:
+      "https://www.instagram.com/precious_executive_wear?igsh=d3U1NjUxeXY0aG55&utm_source=qr",
+    tiktok: "https://vt.tiktok.com/ZSC6Wb6TS/",
+    whatsapp: "https://wa.me/2349168573541",
   },
 } as const;
 
@@ -32,12 +32,11 @@ export const navLinks = [
 ] as const;
 
 export const categories: Category[] = [
-  { slug: "traditional", label: "Traditional Wear" },
-  { slug: "corporate", label: "Corporate Wear" },
-  { slug: "bridal", label: "Bridal Collections" },
-  { slug: "casual", label: "Casual Collections" },
-  { slug: "runway", label: "Runway Designs" },
-  { slug: "custom", label: "Custom Projects" },
+  { slug: "corporate", label: "Gown" },
+  { slug: "casual", label: "Straight Leg Pant" },
+  { slug: "runway", label: "Two Pieces" },
+  { slug: "custom", label: "Suits" },
+  { slug: "wideleg", label: "Wide Leg Pants" },
 ];
 
 export const categoryLabel = (slug: string): string =>

@@ -309,8 +309,8 @@ export default function Contact() {
             <p className="eyebrow mb-4">Follow</p>
             <div className="flex flex-wrap gap-4 text-sm">
               <a href={siteConfig.social.instagram} target="_blank" rel="noopener noreferrer" className="link-underline text-ink hover:text-gold">Instagram</a>
-              <a href={siteConfig.social.facebook} target="_blank" rel="noopener noreferrer" className="link-underline text-ink hover:text-gold">Facebook</a>
-              <a href={siteConfig.social.pinterest} target="_blank" rel="noopener noreferrer" className="link-underline text-ink hover:text-gold">Pinterest</a>
+              <a href={siteConfig.social.tiktok} target="_blank" rel="noopener noreferrer" className="link-underline text-ink hover:text-gold">TikTok</a>
+              <a href={siteConfig.social.whatsapp} target="_blank" rel="noopener noreferrer" className="link-underline text-ink hover:text-gold">WhatsApp</a>
             </div>
           </div>
         </aside>

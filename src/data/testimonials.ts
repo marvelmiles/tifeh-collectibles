@@ -4,36 +4,32 @@ export const testimonials: Testimonial[] = [
   {
     id: 't1',
     quote:
-      'My wedding gown felt like it had always existed and was simply waiting for me. The fittings were the calmest part of the whole celebration.',
-    name: 'Adaeze O.',
-    role: 'Bride · Gilded Vows',
+      'I love my dress, everyone loves it as well I told my HR that a friend of mine made it, she doesn’t even need her measurements before she makes it for her, I’ll give her yojr number If she wants it  and she finally said, please give me her number 🥰😂',
+    name: 'Tiana',
   },
   {
     id: 't2',
     quote:
-      'Tifeh translated my mother’s aso-oke into something I will actually wear again. It honours where I come from without ever feeling like a costume.',
-    name: 'Ngozi A.',
-    role: 'Private client · Traditional',
+      'You need to be out there, your sowing is nice, fine and neat',
+    name: 'Victoria',
   },
   {
     id: 't3',
     quote:
-      'The tailoring is impeccable. I walked into the boardroom and the room shifted. That is what good clothes are supposed to do.',
-    name: 'Tunde B.',
-    role: 'Bespoke · Boardroom Noir',
+      'This two piece looks so amazing, at this point i will finish all my money on clothes, the fact that it dosent need any adjustment, and what i ordered is what i got.',
+    name: 'Omolola',
   },
   {
     id: 't4',
     quote:
-      'Working with the atelier felt like a genuine collaboration. They listened, then gave me something better than I could have described.',
-    name: 'Sarah M.',
-    role: 'Custom commission',
+      'It is really nice, i love my two piece, it suits me perfectly, and i like the color on my skin.',
+    name: 'Chiamaka',
   },
 ];
 
 export const stats: Stat[] = [
-  { value: 12, suffix: '+', label: 'Years in the atelier' },
-  { value: 480, suffix: '+', label: 'Garments hand-finished' },
-  { value: 9, label: 'Runway showcases' },
+  { value: 10, suffix: '+', label: 'Years in the atelier' },
+  { value: 250, suffix: '+', label: 'Garments hand-finished' },
+  { value: 5, label: 'Runway showcases' },
   { value: 100, suffix: '%', label: 'Made to measure' },
 ];

@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { LinkButton } from "@/components/ui/Button";
 import { Image } from "@/components/ui/Image";
 import { TextReveal } from "@/components/ui/TextReveal";
-import { photo, thumb } from "@/lib/images";
 import { EASE_EDITORIAL } from "@/lib/motion";
 
 export function ContactCTA() {
@@ -12,15 +11,18 @@ export function ContactCTA() {
       className="relative isolate overflow-hidden"
     >
       {/* Background image */}
-      <Image
-        src={photo("1496747611176-843222e1e57c", { w: 1600, h: 900 })}
-        thumb={thumb("1496747611176-843222e1e57c")}
-        alt=""
-        className="absolute inset-0 -z-10 h-full w-full"
-      />
+      
+      <div className="h-[50%] w-full">
+
+<Image
+  src="/Images/bg.jpeg"
+  alt=""
+  className="absolute inset-0 -z-10 object-contain object-button" 
+/>
+      </div>
       <div className="absolute inset-0 -z-10 bg-ink/70" aria-hidden="true" />
 
-      <div className="container-page flex min-h-[60vh] flex-col items-center justify-center py-24 text-center text-canvas sm:py-32">
+      <div className="container-page flex min-h-[40vh] flex-col items-center justify-center py-24 text-center text-canvas sm:py-32">
         <motion.p
           className="eyebrow text-gold"
           initial={{ opacity: 0 }}

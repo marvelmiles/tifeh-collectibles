@@ -13,12 +13,11 @@ export function AboutPreview() {
         {/* Image with parallax-style offset frame */}
         <Reveal className="relative lg:col-span-5">
           <div className="absolute -left-3 -top-3 h-full w-full border border-gold/40" aria-hidden="true" />
-          <Image
-            src={photo('1487412720507-e7ab37603c6f', { w: 900, h: 1100 })}
-            thumb={thumb('1487412720507-e7ab37603c6f')}
-            alt="The Tifeh atelier — a garment taking shape on the stand"
-            className="relative aspect-[4/5] w-full"
-          />
+          <img
+  src="/Images/tifeh7.jpeg"
+  alt="The Tifeh atelier — a garment taking shape on the stand"
+  className="relative aspect-[4/5] w-full object-cover"
+/>
         </Reveal>
 
         {/* Copy */}
@@ -36,7 +35,7 @@ export function AboutPreview() {
 
           <Reveal delay={0.1}>
             <p className="mt-6 max-w-prose text-lg leading-relaxed text-muted">
-              Tifeh Collectibles began with a simple conviction: that the cloth and
+             Precious executive wear began with a simple conviction: that the cloth and
               craft of our heritage deserve the same reverence as any couture house
               in Paris or Milan. We weave, cut and hand-finish each piece in our
               atelier — never rushed, never mass-made.
