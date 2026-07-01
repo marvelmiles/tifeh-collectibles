@@ -1,12 +1,11 @@
 import { motion } from 'framer-motion';
 import { LinkButton } from '@/components/ui/Button';
-import { Image } from '@/components/ui/Image';
 import { siteConfig } from '@/config/site';
-import { photo } from '@/lib/images';
+
 import { EASE_EDITORIAL } from '@/lib/motion';
 
 const HERO_IMG = '/Images/tifeh6.jpeg'; 
-const HERO_THUMB = '/images/tifeh7.jpeg';
+
 
 const line = {
   hidden: { y: '110%' },

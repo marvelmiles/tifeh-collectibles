@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion';
 import { PageTransition } from '@/components/ui/PageTransition';
 import { SEO } from '@/components/ui/SEO';
-import { Image } from '@/components/ui/Image';
+
 import { Reveal } from '@/components/ui/Reveal';
 import { TextReveal } from '@/components/ui/TextReveal';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { LinkButton } from '@/components/ui/Button';
-import { photo, thumb } from '@/lib/images';
+
 import { fadeUp, inView, stagger } from '@/lib/motion';
 
 const process = [

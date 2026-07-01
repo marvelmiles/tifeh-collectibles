@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 import { LinkButton } from '@/components/ui/Button';
-import { Image } from '@/components/ui/Image';
+
 import { Reveal } from '@/components/ui/Reveal';
 import { TextReveal } from '@/components/ui/TextReveal';
-import { photo, thumb } from '@/lib/images';
+
 import { EASE_EDITORIAL } from '@/lib/motion';
 
 export function AboutPreview() {
