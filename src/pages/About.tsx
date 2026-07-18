@@ -63,8 +63,8 @@ export default function About() {
         />
         <Reveal delay={0.15}>
           <p className="mt-8 max-w-prose text-lg leading-relaxed text-muted">
-         Boluwatife Akinwunmi, the fourth child and first daughter in a family of six children. born in Ibadan, Oyo State, and raised with strong family values that shaped my determination, creativity, and work ethic.
-         began my educational journey at Dynamic School, Lagos, for primary education and later attended King George Memorial College, Lagos, for my secondary education. After completing secondary school, I discovered my passion for fashion and garment construction. In 2015, I began learning the art of sewing in Badagry, laying the foundation for what would become a lifelong career.
+         Boluwatife Akinwunmi, the fourth child and first daughter in a family of six children. born in Ibadan, Oyo State, and raised with strong family values that shaped her determination, creativity, and work ethic.
+         began her educational journey at Dynamic School, Lagos, for primary education and later attended King George Memorial College, Lagos, for her secondary education. After completing secondary school, She discovered her passion for fashion and garment construction. In 2015, She began learning the art of sewing in Badagry, laying the foundation for what would become a lifelong career.
 
           </p>
         </Reveal>
@@ -87,15 +87,15 @@ export default function About() {
             </h2>
             <div className="mt-6 space-y-5 text-muted">
               <p className="leading-relaxed">
-               While pursuing my university education, my entrepreneurial spirit continued to grow. During the COVID-19 pandemic in 2020, I expanded my skill set by transitioning into footwear production, gaining valuable experience in fashion craftsmanship and business development.
-In 2022, during my National Youth Service Corps (NYSC) year, I returned to further upgrade my sewing skills and deepen my knowledge of fashion design. This investment in personal and professional growth led to the launch of my  fashion brand Precious Executive Wear.
+               While pursuing her university education, her entrepreneurial spirit continued to grow. During the COVID-19 pandemic in 2020, She expanded her skill set by transitioning into footwear production, gaining valuable experience in fashion craftsmanship and business development.
+In 2022, during her National Youth Service Corps (NYSC) year, She returned to further upgrade her sewing skills and deepen her knowledge of fashion design. This investment in personal and professional growth led to the launch of her  fashion brand Precious Executive Wear.
               </p>
               <p className="leading-relaxed">
-            My passion lies in creating elegant, professional, and confidence boosting outfits for corporate women. Through my brand, I am committed to helping women look polished, feel empowered, and express their individuality through well crafted executive wear
+            her passion lies in creating elegant, professional, and confidence boosting outfits for corporate women. Through her brand, She is committed to helping women look polished, feel empowered, and express their individuality through well crafted executive wear
               </p>
               <p className="leading-relaxed">
-               My journey reflects resilience, continuous learning, and a dedication to excellence as I work towards building a recognized fashion brand that inspires and serves women across different industries.
-Today, alongside my career as an Internal Auditor, I continue to pursue my passion for fashion, combining professionalism, creativity, and entrepreneurship to make a meaningful impact in the lives of corporate women.
+               her journey reflects resilience, continuous learning, and a dedication to excellence as she work towards building a recognized fashion brand that inspires and serves women across different industries.
+Today, alongside her career as an Internal Auditor, She continue to pursue her passion for fashion, combining professionalism, creativity, and entrepreneurship to make a meaningful impact in the lives of corporate women.
               </p>
             </div>
             <div className="mt-8">
