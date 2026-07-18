@@ -20,11 +20,14 @@ export function ContactCTA() {
   className="absolute inset-0 -z-10 object-contain object-button" 
 />
       </div>
-      <div className="absolute inset-0 -z-10 bg-ink/70" aria-hidden="true" />
+      <div
+  className="absolute inset-0 -z-10 bg-ink/60 dark:bg-ink/25"
+  aria-hidden="true"
+/>
 
       <div className="container-page flex min-h-[40vh] flex-col items-center justify-center py-24 text-center text-canvas sm:py-32">
         <motion.p
-          className="eyebrow text-gold"
+          className="eyebrow text-black"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

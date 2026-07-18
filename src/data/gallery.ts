@@ -42,7 +42,17 @@ const seeds: Seed[] = [
   { id: 'g27', file: 'gown7.jpeg', category: 'corporate', aspect: 'portrait', alt: 'Tailored gown', caption: 'Gown' },
   { id: 'g28', file: 'suit5.jpeg', category: 'custom', aspect: 'portrait', alt: 'Bespoke suit', caption: 'Suit' },
   { id: 'g29', file: 'straight4.jpeg', category: 'casual', aspect: 'portrait', alt: 'Straight leg pant styling', caption: 'Straight Leg Pant' },
-  { id: 'g30', file: 'suit.jpeg', category: 'custom', aspect: 'portrait', alt: 'Bespoke suit', caption: 'Suit' },
+  { id: 'g30', file: 'Gownn.jpeg', category: 'corporate', aspect: 'portrait', alt: 'Tailored gown', caption: 'Gown' },
+  { id: 'g31', file: 'Gownn5.jpeg', category: 'corporate', aspect: 'portrait', alt: 'Tailored gown', caption: 'Gown' },
+  { id: 'g32', file: 'Two-piece6.jpeg', category: 'runway', aspect: 'portrait', alt: 'Two Piece set', caption: 'Two Piece' },
+  { id: 'g33', file: 'Gownn6.jpeg', category: 'corporate', aspect: 'portrait', alt: 'Tailored gown', caption: 'Gown' },
+  { id: 'g34', file: 'Gownn7.jpeg', category: 'corporate', aspect: 'portrait', alt: 'Tailored gown', caption: 'Gown' },
+  { id: 'g35', file: 'gownn8.jpeg', category: 'corporate', aspect: 'portrait', alt: 'Tailored gown', caption: 'Gown' },
+  { id: 'g36', file: 'Two-piece.jpeg', category: 'runway', aspect: 'portrait', alt: 'Two piece set', caption: 'Two Piece' },
+  { id: 'g37', file: 'Two-piece4.jpeg', category: 'runway', aspect: 'portrait', alt: 'Two piece set', caption: 'Two Piece' },
+  { id: 'g38', file: 'Two-piece5.jpeg', category: 'runway', aspect: 'portrait', alt: 'Two piece set', caption: 'Two Piece' },
+  { id: 'g39', file: 'wide-leg.jpeg', category: 'custom', aspect: 'portrait', alt: 'Bespoke suit', caption: 'Suit' },
+  { id: 'g40', file: 'suit.jpeg', category: 'custom', aspect: 'portrait', alt: 'Bespoke suit', caption: 'Suit' },
 ];
 
 export const galleryImages: GalleryImage[] = seeds.map((s) => ({
