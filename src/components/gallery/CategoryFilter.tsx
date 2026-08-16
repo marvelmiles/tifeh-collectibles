@@ -34,19 +34,21 @@ export function CategoryFilter({ active, onChange, counts }: CategoryFilterProps
               role="tab"
               aria-selected={isActive}
               onClick={() => onChange(item.slug)}
-              className={`relative whitespace-nowrap px-4 py-2 font-sans text-[0.8rem] uppercase tracking-wide transition-colors duration-300 ${
+              className={`relative isolate whitespace-nowrap px-4 py-2 font-sans text-[0.8rem] uppercase tracking-wide transition-colors duration-300 ${
                 isActive ? 'text-canvas' : 'text-ink hover:text-gold'
               }`}
             >
               {isActive && (
                 <motion.span
                   layoutId="filter-pill"
-                  className="absolute inset-0 -z-10 bg-ink"
+                  className="absolute inset-0 bg-ink"
                   transition={{ type: 'spring', stiffness: 380, damping: 32 }}
                 />
               )}
-              {item.label}
-              <span className={isActive ? 'text-gold' : 'text-muted'}> · {count}</span>
+              <span className="relative">
+                {item.label}
+                <span className={isActive ? 'text-gold' : 'text-muted'}> · {count}</span>
+              </span>
             </button>
           );
         })}

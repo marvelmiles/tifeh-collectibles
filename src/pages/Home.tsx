@@ -3,6 +3,7 @@ import { SEO } from '@/components/ui/SEO';
 import { Hero } from '@/components/home/Hero';
 import { AboutPreview } from '@/components/home/AboutPreview';
 import { FeaturedCollections } from '@/components/home/FeaturedCollections';
+import { AvailableNow } from '@/components/shop/AvailableNow';
 import { Stats } from '@/components/home/Stats';
 import { Testimonials } from '@/components/home/Testimonials';
 import { ContactCTA } from '@/components/home/ContactCTA';
@@ -19,6 +20,7 @@ export default function Home() {
       <Hero />
       <AboutPreview />
       <FeaturedCollections />
+      <AvailableNow />
       <Stats />
       <Testimonials />
       <ContactCTA />
