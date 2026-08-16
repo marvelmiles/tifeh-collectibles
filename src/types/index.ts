@@ -37,6 +37,36 @@ export interface Collection {
   related: string[];
 }
 
+/** The ready-to-wear pieces currently available to buy. */
+export type ProductCategorySlug =
+  | 'peplum-tops'
+  | 'ruched-gowns'
+  | 'corporate-gowns'
+  | 'two-piece-sets'
+  | 'bell-sleeve-sets';
+
+/** A size band and the price that applies to every piece cut within it. */
+export interface PriceTier {
+  sizes: string;
+  price: number;
+}
+
+export interface Product {
+  id: string;
+  name: string;
+  colourway: string;
+  image: string;
+  alt: string;
+}
+
+export interface ProductCategory {
+  slug: ProductCategorySlug;
+  label: string;
+  tagline: string;
+  priceTiers: readonly PriceTier[];
+  products: readonly Product[];
+}
+
 export interface Testimonial {
   id: string;
   quote: string;
