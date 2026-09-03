@@ -68,7 +68,7 @@ export function AvailableNow() {
             >
               {activeCategory.products.map((product) => (
                 <li key={product.id} className="flex">
-                  <ProductCard product={product} priceTiers={activeCategory.priceTiers} />
+                  <ProductCard product={product} />
                 </li>
               ))}
             </motion.ul>

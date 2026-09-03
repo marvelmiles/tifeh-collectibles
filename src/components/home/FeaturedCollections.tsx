@@ -20,7 +20,7 @@ export function FeaturedCollections() {
           <SectionHeading
             eyebrow="Selected work"
             title="Collections"
-            lead="Six lines, one philosophy — from hand-woven tradition to the runway."
+            lead="Six lines, one philosophy from hand-woven tradition to the runway."
           />
           <Reveal className="hidden md:block">
             <LinkButton to="/gallery" variant="ghost" withArrow className="px-0">
