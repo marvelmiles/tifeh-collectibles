@@ -38,7 +38,7 @@ export function AboutPreview() {
              Precious executive wear began with a simple conviction: that the cloth and
               craft of our heritage deserve the same reverence as any couture house
               in Paris or Milan. We weave, cut and hand-finish each piece in our
-              atelier — never rushed, never mass-made.
+              atelier, never rushed, never mass-made.
             </p>
           </Reveal>
 

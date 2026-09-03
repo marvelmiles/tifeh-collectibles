@@ -43,11 +43,16 @@ export type ProductCategorySlug =
   | 'ruched-gowns'
   | 'corporate-gowns'
   | 'two-piece-sets'
-  | 'bell-sleeve-sets';
+  | 'bell-sleeve-sets'
+  | 'bubu-kaftans'
+  | 'statement-dresses';
 
-/** A size band and the price that applies to every piece cut within it. */
+/**
+ * One priced line on a product card. The label names what is being priced:
+ * a size band for pieces sold by fit, or a component for pieces sold as a set.
+ */
 export interface PriceTier {
-  sizes: string;
+  label: string;
   price: number;
 }
 
@@ -57,13 +62,16 @@ export interface Product {
   colourway: string;
   image: string;
   alt: string;
+  description?: string;
+  /** Additional views of the same piece, shown as thumbnails beside the cover. */
+  gallery?: readonly string[];
+  priceTiers: readonly PriceTier[];
 }
 
 export interface ProductCategory {
   slug: ProductCategorySlug;
   label: string;
   tagline: string;
-  priceTiers: readonly PriceTier[];
   products: readonly Product[];
 }
 

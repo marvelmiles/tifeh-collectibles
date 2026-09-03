@@ -1,22 +1,33 @@
-import type { PriceTier, ProductCategory } from '@/types';
+import type { PriceTier, Product, ProductCategory } from '@/types';
 
 const STANDARD_SIZES = 'Size 4 - 12';
 const EXTENDED_SIZES = 'Size 14 and above';
+const ALL_SIZES = 'All sizes';
 
-const priceTiers = (standard: number, extended: number): readonly PriceTier[] => [
-  { sizes: STANDARD_SIZES, price: standard },
-  { sizes: EXTENDED_SIZES, price: extended },
+type ProductDraft = Omit<Product, 'priceTiers'>;
+
+const sizeBandPricing = (standard: number, extended: number): readonly PriceTier[] => [
+  { label: STANDARD_SIZES, price: standard },
+  { label: EXTENDED_SIZES, price: extended },
 ];
 
+const flatPricing = (price: number): readonly PriceTier[] => [{ label: ALL_SIZES, price }];
+
 const image = (file: string): string => `/Images/${file}`;
+
+const gallery = (...files: readonly string[]): readonly string[] => files.map(image);
+
+const pricedAt = (
+  tiers: readonly PriceTier[],
+  drafts: readonly ProductDraft[],
+): readonly Product[] => drafts.map((draft) => ({ ...draft, priceTiers: tiers }));
 
 export const productCategories: readonly ProductCategory[] = [
   {
     slug: 'peplum-tops',
     label: 'Peplum Tops',
     tagline: 'Zip-front peplum with a contrast portrait collar and flared cuff.',
-    priceTiers: priceTiers(30_000, 33_000),
-    products: [
+    products: pricedAt(sizeBandPricing(30_000, 33_000), [
       {
         id: 'top-chocolate',
         name: 'Portrait Collar Peplum Top',
@@ -52,14 +63,13 @@ export const productCategories: readonly ProductCategory[] = [
         image: image('top8.jpeg'),
         alt: 'Midnight navy peplum top with a wide ivory portrait collar',
       },
-    ],
+    ]),
   },
   {
     slug: 'ruched-gowns',
     label: 'Ruched Gowns',
     tagline: 'Puff-sleeve midi gown, side-ruched with drawstring ties.',
-    priceTiers: priceTiers(26_000, 29_000),
-    products: [
+    products: pricedAt(sizeBandPricing(26_000, 29_000), [
       {
         id: 'gown-wine',
         name: 'Side Ruched Midi Gown',
@@ -95,14 +105,13 @@ export const productCategories: readonly ProductCategory[] = [
         image: image('gownp8.jpeg'),
         alt: 'Chocolate brown ruched midi gown with puff sleeves',
       },
-    ],
+    ]),
   },
   {
     slug: 'corporate-gowns',
     label: 'Corporate Gowns',
     tagline: 'Two-tone yoke and button detail, tailored for the office.',
-    priceTiers: priceTiers(26_000, 29_000),
-    products: [
+    products: pricedAt(sizeBandPricing(26_000, 29_000), [
       {
         id: 'corporate-purple',
         name: 'Two Tone Corporate Gown',
@@ -138,14 +147,13 @@ export const productCategories: readonly ProductCategory[] = [
         image: image('copg8.jpeg'),
         alt: 'Black corporate midi gown with an ivory yoke',
       },
-    ],
+    ]),
   },
   {
     slug: 'two-piece-sets',
     label: 'Two Piece Sets',
     tagline: 'Button-trim peplum top with a wide leg trouser, sold as a set.',
-    priceTiers: priceTiers(30_000, 35_000),
-    products: [
+    products: pricedAt(sizeBandPricing(30_000, 35_000), [
       {
         id: 'set-sage',
         name: 'Pocket Detail Two Piece',
@@ -181,14 +189,13 @@ export const productCategories: readonly ProductCategory[] = [
         image: image('twop8.jpeg'),
         alt: 'Sky blue peplum top with navy wide leg trousers',
       },
-    ],
+    ]),
   },
   {
     slug: 'bell-sleeve-sets',
     label: 'Bell Sleeve Sets',
     tagline: 'Zip-front peplum jacket with a scarf neck tie and bell sleeves, cut with a straight leg trouser.',
-    priceTiers: priceTiers(30_000, 35_000),
-    products: [
+    products: pricedAt(sizeBandPricing(30_000, 35_000), [
       {
         id: 'bell-fuchsia',
         name: 'Scarf Neck Bell Sleeve Set',
@@ -230,6 +237,125 @@ export const productCategories: readonly ProductCategory[] = [
         colourway: 'Forest Green',
         image: image('roundtwop9.jpeg'),
         alt: 'Forest green bell sleeve peplum jacket and trouser set with a scarf neck tie',
+      },
+    ]),
+  },
+  {
+    slug: 'bubu-kaftans',
+    label: 'Bubu and Kaftans',
+    tagline: 'Flowing bubu silhouettes in silk, cotton and printed kimono, cut generously so one size band fits every frame.',
+    products: [
+      {
+        id: 'bubu-silk',
+        name: 'Silk Bubu',
+        colourway: 'White, black, beige, sky blue or peach',
+        image: image('bubu.jpeg'),
+        alt: 'White silk bubu with wide sleeves and a matching neck scarf',
+        gallery: gallery('bubu4.jpeg', 'bubu5.jpeg', 'bubu6.jpeg'),
+        priceTiers: flatPricing(25_000),
+      },
+      {
+        id: 'bubu-cotton-stripe',
+        name: 'Multicoloured Cotton Bubu',
+        colourway: 'Pastel Multicolour',
+        image: image('gownb.jpeg'),
+        alt: 'Full length cotton bubu panelled in pastel pink, blue, green and yellow stripes',
+        gallery: gallery('gownb4.jpeg', 'gownb5.jpeg', 'gownb6.jpeg', 'gownb7.jpeg'),
+        priceTiers: flatPricing(35_000),
+      },
+      {
+        id: 'bubu-kimono-set',
+        name: 'Kimono Bubu and Trouser Set',
+        colourway: 'Ivory Floral and Chocolate',
+        description:
+          'Bubu kimono and pant trouser, the perfect blend of elegance, comfort and statement style.',
+        image: image('yellow.jpeg'),
+        alt: 'Ivory and gold floral kimono bubu worn open over chocolate brown wide leg trousers',
+        gallery: gallery(
+          'yellow4.jpeg',
+          'yellow5.jpeg',
+          'yellow6.jpeg',
+          'yellow7.jpeg',
+          'yellow8.jpeg',
+        ),
+        priceTiers: [
+          { label: 'Kimono bubu', price: 30_000 },
+          { label: 'Trouser', price: 17_000 },
+        ],
+      },
+    ],
+  },
+  {
+    slug: 'statement-dresses',
+    label: 'Statement Dresses',
+    tagline: 'Free flowing gowns and shirt dresses that keep the drama without giving up the comfort.',
+    products: [
+      {
+        id: 'dress-textured-off-shoulder',
+        name: 'Off Shoulder Textured Gown',
+        colourway: 'White, sky blue, navy blue, peach or wine',
+        description:
+          'Effortlessly stylish, beautifully crafted and made for the woman who loves to make an elegant statement. Because comfort should never mean compromising on style.',
+        image: image('peach.jpeg'),
+        alt: 'Peach textured off shoulder gown with short puff sleeves and a folded neckline',
+        gallery: gallery(
+          'peach4.jpeg',
+          'peach5.jpeg',
+          'peach6.jpeg',
+          'peach7.jpeg',
+          'peach8.jpeg',
+        ),
+        priceTiers: flatPricing(38_000),
+      },
+      {
+        id: 'dress-organza-cape',
+        name: 'Organza Cape Sleeve Gown',
+        colourway: 'Emerald Green',
+        description: 'Effortless. Elegant. Comfortable. Simply precious.',
+        image: image('green.jpeg'),
+        alt: 'Emerald green gown with a circle print centre panel and sheer organza cape sleeves',
+        gallery: gallery(
+          'green4.jpeg',
+          'green5.jpeg',
+          'green6.jpeg',
+          'green7.jpeg',
+          'green8.jpeg',
+        ),
+        priceTiers: flatPricing(25_000),
+      },
+      {
+        id: 'dress-denim-stripe',
+        name: 'Denim Detail Striped Gown',
+        colourway: 'Cobalt and Denim',
+        description:
+          'A little touch of denim, and a whole lot of precious. Those denim pockets and sleeves are the chef’s kiss.',
+        image: image('blue.jpeg'),
+        alt: 'Cobalt and white striped gown with a contrast denim pocket and denim sleeve cuffs',
+        gallery: gallery(
+          'blue4.jpeg',
+          'blue5.jpeg',
+          'blue6.jpeg',
+          'blue7.jpeg',
+          'blue8.jpeg',
+        ),
+        priceTiers: flatPricing(30_000),
+      },
+      {
+        id: 'dress-belted-shirt',
+        name: 'Belted Shirt Dress',
+        colourway: 'Orchid Tie Dye',
+        description:
+          'Free, bold and effortlessly elegant. Statement sleeves, a flattering back belt and that perfect flow, this one speaks for itself.',
+        image: image('pink.jpeg'),
+        alt: 'Orchid tie dye shirt dress with a collar, button front and gathered statement sleeves',
+        gallery: gallery(
+          'pink4.jpeg',
+          'pink5.jpeg',
+          'pink6.jpeg',
+          'pink7.jpeg',
+          'pink8.jpeg',
+        ),
+        priceTiers: flatPricing(18_000),
       },
     ],
   },
